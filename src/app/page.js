@@ -2,12 +2,12 @@ import Image from "next/image";
 import photo1 from "./img/course-1.png";
 import photo2 from "./img/course-2.png";
 import photo3 from "./img/course-3.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <section className="container mx-auto">
-      <div className="grid grid-cols-3 gap-5">
-
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 p-5">
         <div className="rounded-xl shadow-lg hover:scale-105 hover:duration-500 ease-in-out">
           <Image
             className="rounded-t-xl"
@@ -17,17 +17,15 @@ export default function Home() {
             height={514}
           ></Image>
           <div className="p-3 my-2">
-            <h1 className="text-lg ">This is a one line title</h1>
-            <p>
-              Two line paragraph Lorem ipsum dolor sit amet, consectetur
-            </p>
+            <h1 className="text-lg font-semibold">This is a one line title</h1>
+            <p>Two line paragraph Lorem ipsum dolor sit amet, consectetur</p>
             <div className="flex justify-between mt-2">
               <span>
                 <del>$1050</del>
               </span>
               <span className="text-primary">$750</span>
-              <span className="bg-secondary rounded-2xl px-2	">
-                You Save $250
+              <span className="bg-secondary rounded-2xl px-2">
+                <Link href="/cart">You Save $250</Link>
               </span>
             </div>
           </div>
@@ -88,28 +86,19 @@ export default function Home() {
           </div>
         </div>
 
-        
         <div className="rounded-xl shadow-lg hover:scale-105 hover:duration-500 ease-in-out">
           <Image
             className="rounded-t-xl"
-            src={photo1}
+            src={photo2}
             alt="course thumbnail"
             width={570}
             height={514}
           ></Image>
           <div className="p-3 my-2">
-            <h1 className="text-lg ">This is a one line title</h1>
-            <p>
-              Two line paragraph Lorem ipsum dolor sit amet, consectetur
-            </p>
+            <h1 className="text-lg font-semibold">This is a one line title</h1>
+            <p>Two line paragraph Lorem ipsum dolor sit amet, consectetur</p>
             <div className="flex justify-between mt-2">
-              <span>
-                <del>$1050</del>
-              </span>
               <span className="text-primary">$750</span>
-              <span className="bg-secondary rounded-2xl px-2	">
-                You Save $250
-              </span>
             </div>
           </div>
           <hr className="border-[#C9C9C9]"></hr>
@@ -169,28 +158,19 @@ export default function Home() {
           </div>
         </div>
 
-        
         <div className="rounded-xl shadow-lg hover:scale-105 hover:duration-500 ease-in-out">
           <Image
             className="rounded-t-xl"
-            src={photo1}
+            src={photo3}
             alt="course thumbnail"
             width={570}
             height={514}
           ></Image>
           <div className="p-3 my-2">
-            <h1 className="text-lg ">This is a one line title</h1>
-            <p>
-              Two line paragraph Lorem ipsum dolor sit amet, consectetur
-            </p>
+            <h1 className="text-lg font-semibold">This is a one line title</h1>
+            <p>Two line paragraph Lorem ipsum dolor sit amet, consectetur</p>
             <div className="flex justify-between mt-2">
-              <span>
-                <del>$1050</del>
-              </span>
-              <span className="text-primary">$750</span>
-              <span className="bg-secondary rounded-2xl px-2	">
-                You Save $250
-              </span>
+              <span className="text-primary">FREE</span>
             </div>
           </div>
           <hr className="border-[#C9C9C9]"></hr>
@@ -249,16 +229,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        
-        
-
-        
-      
-
-        
-
-        
       </div>
     </section>
   );
